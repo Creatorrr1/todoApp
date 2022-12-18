@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Todo from './todo';
+import Todo from './Todo';
 import TodoForm from './TodoForm';
 
 function TodoList () {
@@ -19,7 +19,13 @@ function TodoList () {
     }
 
     const completeTodo = id => {
-        
+        let updatedTodos = todos.map(todo => {
+            if(todo.id === id) {
+                todo.isComplete = !todo.isComplete
+            }
+            return todo
+        })
+        setTodos(updatedTodos)
     }
 
 
