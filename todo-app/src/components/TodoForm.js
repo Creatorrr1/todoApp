@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
+import './css/todoForm.css'
 
 function TodoForm (props) {
     const [text, setText] = useState('')
